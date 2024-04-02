@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Place Your Order</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="order">
+        <h2>Fill in Your Details</h2>
+        <form action="place_order.php" method="post">
+            <label for="dish">Select Dish:</label>
+            <select name="dish" id="dish">
+                <?php include 'fetch_menu.php'; ?>
+            </select><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" min="1" required><br>
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Foodie's Corner. All rights reserved.</p>
+    </footer>
+</body>
+</html>
